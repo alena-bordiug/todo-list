@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo list</title>
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <aside class="aside">
+      <img src="./img/todo-logo.svg" alt="logo" class="logo" />
+    </aside>
+    <main class="main container">
+      <section class="heading-section">
+        <div class="list-variants">
+          <div class="lists-choosen">
+            <label for="lists">My Lists</label>
+            <select name="lists" id="lists">
+              <option value="">Select or create list</option>
+            </select>
+          </div>
+          <button class="create-list-btn btn" type="submit">+ New List</button>
+          <button class="edit-list-btn btn" type="submit">Edit List</button>
+        </div>
+      </section>
+      <section class="task-section">
+        <div class="task">
+          <div class="task-input">
+            <input type="checkbox" id="task" name="task" />
+            <label for="task">Taska</label>
+          </div>
+          <button type="button" class="edit-task-btn btn">Edit Task</button>
+          <button type="button" class="delete-task-btn btn">Delete Task</button>
+        </div>
+        <div class="new-task-btn">
+          <button type="button" class="new-task-btn round-btn">+</button>
+        </div>
+      </section>
+    </main>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
