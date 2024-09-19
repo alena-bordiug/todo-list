@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo list</title>
+    <link rel="stylesheet" href="./css/buttons.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/index.css" />
@@ -17,22 +18,23 @@
         <div class="list-variants">
           <div class="lists-choosen">
             <label for="lists">My Lists</label>
-            <select name="lists" id="lists">
+            <select name="lists" id="lists" class="list-selection-input">
+              <option value="">Select or create list</option>
               <option value="">Select or create list</option>
             </select>
           </div>
-          <button class="create-list-btn btn" type="submit">+ New List</button>
-          <button class="edit-list-btn btn" type="submit">Edit List</button>
+          <button class="edit-btn btn" type="submit">Edit List</button>
+          <button class="primary-btn btn" type="submit">+ New List</button>
         </div>
       </section>
       <section class="task-section">
         <div class="task">
           <div class="task-input">
-            <input type="checkbox" id="task" name="task" />
-            <label for="task">Taska</label>
+            <input type="checkbox" id="task-checkbox" class="task-checkbox" />
+            <input type="text" id="task-text" value="Task 1" disabled />
           </div>
-          <button type="button" class="edit-task-btn btn">Edit Task</button>
-          <button type="button" class="delete-task-btn btn">Delete Task</button>
+          <button type="button" class="edit-btn btn">Edit Task</button>
+          <button type="button" class="primary-btn btn">Delete Task</button>
         </div>
         <div class="new-task-btn">
           <button type="button" class="new-task-btn round-btn">+</button>
