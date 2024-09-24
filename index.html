@@ -23,22 +23,39 @@
               <option value="">Select or create list</option>
             </select>
           </div>
-          <button class="edit-btn btn" type="submit">Edit List</button>
           <button class="primary-btn btn" type="submit">+ New List</button>
+          <button class="edit-btn btn" type="submit">Rename List</button>
         </div>
       </section>
       <section class="task-section">
-        <div class="task">
-          <div class="task-input">
-            <input type="checkbox" id="task-checkbox" class="task-checkbox" />
-            <input type="text" id="task-text" value="Task 1" disabled />
-          </div>
-          <button type="button" class="edit-btn btn">Edit Task</button>
-          <button type="button" class="primary-btn btn">Delete Task</button>
+        <div class="add-task">
+          <input
+            type="text"
+            id="addTaskInput"
+            class="add-task-input"
+            placeholder="Add new task..."
+          />
+          <button type="submit" class="add-task-btn btn" id="addTask">
+            Add Task
+          </button>
         </div>
-        <div class="new-task-btn">
-          <button type="button" class="new-task-btn round-btn">+</button>
-        </div>
+        <ul class="my-tasks" id="MyTasks">
+          <li>
+            <span class="task-text">Buy food</span
+            ><span class="icon">&#x270E;</span
+            ><span class="icon">&#x2715;</span>
+          </li>
+          <li>
+            <span class="task-text">Cook food</span
+            ><span class="icon">&#x270E;</span
+            ><span class="icon">&#x2715;</span>
+          </li>
+          <li>
+            <span class="task-text">Pet your cat</span
+            ><span class="icon">&#x270E;</span
+            ><span class="icon">&#x2715;</span>
+          </li>
+        </ul>
       </section>
     </main>
     <script src="./js/index.js"></script>

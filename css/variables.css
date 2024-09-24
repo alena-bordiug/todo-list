@@ -1,10 +1,13 @@
 :root {
     --aside-color: #1F2D48;
     --outline-color: #C7CDDD;
-    --task-section-bg: #F3F6FF;
+    --add-task: #1F2D48;
+    --add-task-btn:#F49D6E;
+    --odd-task-section-bg: #F3F6FF;
+    --even-task-section-bg: #c3d0f5;
     --primary-btn: #1F2D4A;
-    --edit-btn: #DCE1F2;
-    --delete-btn: #FB8282; 
+    --edit-btn: #e3e8f9; 
     --main-text: #000000;
     --white-text:  #ffffff;
+    --hover-color:#F49D6E;
 }
