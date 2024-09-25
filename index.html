@@ -17,7 +17,7 @@
       <section class="heading-section">
         <div class="list-variants">
           <div class="lists-choosen">
-            <label for="lists">My Lists</label>
+            <label for="lists" class="my-list-heading">My Lists</label>
             <select name="lists" id="lists" class="list-selection-input">
               <option value="">Select or create list</option>
               <option value="">Select or create list</option>
@@ -31,33 +31,23 @@
         <div class="add-task">
           <input
             type="text"
-            id="addTaskInput"
+            id="add-task-input"
             class="add-task-input"
             placeholder="Add new task..."
           />
-          <button type="submit" class="add-task-btn btn" id="addTask">
+          <button type="submit" class="add-task-btn btn" id="add-task-btn">
             Add Task
           </button>
         </div>
-        <ul class="my-tasks" id="MyTasks">
+        <ul class="list-items" id="list-items">
           <li>
             <span class="task-text">Buy food</span
-            ><span class="icon">&#x270E;</span
-            ><span class="icon">&#x2715;</span>
-          </li>
-          <li>
-            <span class="task-text">Cook food</span
-            ><span class="icon">&#x270E;</span
-            ><span class="icon">&#x2715;</span>
-          </li>
-          <li>
-            <span class="task-text">Pet your cat</span
             ><span class="icon">&#x270E;</span
             ><span class="icon">&#x2715;</span>
           </li>
         </ul>
       </section>
     </main>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
