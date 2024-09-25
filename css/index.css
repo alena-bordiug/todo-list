@@ -35,7 +35,7 @@
   height: 40px;
   padding: 8px;
   border: none;
-  outline: solid 1px var(--add-task-btn);
+  outline: solid 1px var(--outline-color);
 }
 
 .add-task {
@@ -58,7 +58,7 @@
   height: 40px;
   border-radius: 8px;
   outline: solid 1px var(--outline-color);
-  margin-right: 24px;
+  margin-right: 18px;
 }
 
 li {

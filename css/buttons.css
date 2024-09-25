@@ -10,13 +10,13 @@
 .primary-btn {
   background-color: var(--primary-btn);
   color: var(--white-text);
-  margin-right: 16px;
+  margin-right: 12px;
 }
 
-.edit-btn {
+.delete-btn {
   background-color: white;
   color: var(--main-text);
-  outline: 1px solid var(--outline-color);
+  outline: 1px solid var(--delete-color);
   
 }
 
