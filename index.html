@@ -18,12 +18,18 @@
         <div class="list-variants">
           <div class="lists-choosen">
             <label for="lists" class="my-list-heading">My Lists</label>
-            <select name="lists" id="lists" class="list-selection-input">
-              <option value="List 1">Choose or create new list</option>
-            </select>
+            <select
+              name="lists"
+              id="lists"
+              class="list-selection-input"
+            ></select>
           </div>
-          <button class="primary-btn btn" type="submit">+ New List</button>
-          <button class="delete-btn btn" type="submit">Delete List</button>
+          <button class="primary-btn btn" id="primary-btn" type="submit">
+            + New List
+          </button>
+          <button class="delete-btn btn" id="delete-btn" type="submit">
+            Delete List
+          </button>
         </div>
       </section>
       <section class="task-section">
@@ -39,11 +45,11 @@
           </button>
         </div>
         <ul class="list-items" id="list-items">
-          <li>
+          <!-- <li>
             <span class="task-text">Buy food</span
             ><span class="icon">&#x270E;</span
             ><span class="icon">&#x2715;</span>
-          </li>
+          </li> -->
         </ul>
       </section>
     </main>
