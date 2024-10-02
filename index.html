@@ -11,18 +11,19 @@
   </head>
   <body>
     <aside class="aside">
-      <img src="./img/todo-logo.svg" alt="logo" class="logo" />
+      <div><img src="./img/todo-logo.svg" alt="logo" class="logo" /></div>
+      <div id="weather" class="weather"></div>
     </aside>
     <main class="main container">
       <section class="heading-section">
         <div class="list-variants">
           <div class="lists-choosen">
             <label for="lists" class="my-list-heading">My Lists</label>
-            <select
-              name="lists"
-              id="lists"
-              class="list-selection-input"
-            ></select>
+            <select name="lists" id="lists" class="list-selection-input">
+              <option value="" selected >
+                Choose list or create new
+              </option>
+            </select>
           </div>
           <button class="primary-btn btn" id="primary-btn" type="submit">
             + New List
@@ -44,13 +45,7 @@
             Add Task
           </button>
         </div>
-        <ul class="list-items" id="list-items">
-          <!-- <li>
-            <span class="task-text">Buy food</span
-            ><span class="icon">&#x270E;</span
-            ><span class="icon">&#x2715;</span>
-          </li> -->
-        </ul>
+        <ul class="list-items" id="list-items"></ul>
       </section>
     </main>
     <script type="module" src="./js/index.js"></script>

@@ -1,10 +1,20 @@
 .aside {
   background-color: var(--aside-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo {
   margin-top: 32px;
   margin-left: 32px;
+}
+
+.weather {
+  margin-left: 32px;
+  margin-bottom: 32px;
+  color: var(--add-task-btn);
+  font-size: 18px;
 }
 
 .heading-section {
