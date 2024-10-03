@@ -11,6 +11,7 @@ export class TodoApp {
     this.loadTaskLists();
     this.setupEventListeners();
     this.updateListSelect();
+    this.loadCurrentList();
   }
 
   setupEventListeners() {
@@ -38,11 +39,13 @@ export class TodoApp {
       this.updateListSelect();
       this.saveTaskListNames();
       this.switchList(newListName);
+      this.listSelect.value = newListName;
     }
   }
 
   updateListSelect() {
-    this.listSelect.innerHTML = '';
+   this.listSelect.innerHTML =
+     '<option value="">Create new list</option>';
     Object.keys(this.taskLists).forEach((listName) => {
       const option = document.createElement('option');
       option.value = option.textContent = listName;
@@ -51,8 +54,15 @@ export class TodoApp {
   }
 
   switchList(listName) {
-    this.currentTaskList = this.taskLists[listName];
+    if (listName) {
+      this.currentTaskList = this.taskLists[listName];
+      this.listSelect.value = listName;
+    } else {
+      this.currentTaskList = null;
+      this.listSelect.value = '';
+    }
     this.renderTasks();
+    this.saveCurrentList();
   }
 
   deleteList() {
@@ -97,8 +107,8 @@ export class TodoApp {
       <span class="icon delete">&#x2715;</span>
     `;
 
-    li.querySelector('.task-text').addEventListener('click', (e) =>
-      e.target.classList.toggle('checked-items'),
+    li.querySelector('.task-text').addEventListener('click', (event) =>
+      event.target.classList.toggle('checked-items'),
     );
     li.querySelector('.delete').addEventListener('click', () =>
       this.removeTask(index),
@@ -142,15 +152,29 @@ export class TodoApp {
     );
   }
 
+  saveCurrentList() {
+    localStorage.setItem(
+      'currentList',
+      this.currentTaskList ? this.currentTaskList.name : '',
+    );
+  }
+
   loadTaskLists() {
     const taskListNames =
       JSON.parse(localStorage.getItem('taskListNames')) || [];
     taskListNames.forEach((name) => {
       this.taskLists[name] = new TaskList(name);
     });
+  }
 
-    if (taskListNames.length > 0) {
-      this.currentTaskList = this.taskLists[taskListNames[0]];
+  loadCurrentList() {
+    const currentListName = localStorage.getItem('currentList');
+    if (currentListName && this.taskLists[currentListName]) {
+      this.switchList(currentListName);
+    } else if (Object.keys(this.taskLists).length > 0) {
+      this.switchList(Object.keys(this.taskLists)[0]);
+    } else {
+      this.switchList('');
     }
   }
 }
